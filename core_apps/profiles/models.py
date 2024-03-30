@@ -18,7 +18,7 @@ class Profile(TimeStampedModel):
     phone_number = PhoneNumberField(verbose_name=_("Phone Number"), max_length=30, default="+820101324238")
     about_me = models.TextField(verbose_name=_("About Me"), default="Say something about yourself")
     gender = models.CharField(
-        verbose=_("gender"),
+        verbose_name=_("gender"),
         choices=Gender.choices, default=Gender.OTHER, max_length=20
     )
     country = CountryField(verbose_name=_("Country"), max_length=100, default="Nigeria", blank=False, null=False)
